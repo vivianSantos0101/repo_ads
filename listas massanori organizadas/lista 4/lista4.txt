@@ -1,0 +1,91 @@
+1)
+import random
+from random import sample
+def exercicio1():
+    listaRandom = sample(range(100),10)
+    maior = 0
+    menor = 101
+    for valor in listaRandom:
+        if(valor>maior):
+            maior = valor
+        if(valor<menor):
+            menor = valor 
+    print(listaRandom)
+    print(maior, menor)
+
+2)import random
+par = []
+impar = []
+def exercicio2 ():
+    listaRandom = random.sample(range(100),20)
+    for resultado in listaRandom:
+      if resultado%2 == 0: 
+        par.append(resultado)
+      else:
+        impar.append(resultado)
+    print(listaRandom,par,impar)
+exercicio2 ()
+
+3)
+import random
+vetor1=[]
+vetor2=[]
+vetor3=[]
+for elemento in range(10):
+   numeroR= random.randint(1,100)
+   numeroX= random.randint(1,100)
+   vetor1.append(numeroR)
+   vetor2.append(numeroX)
+   vetor3.append(numeroR)
+   vetor3.append(numeroX)
+print(vetor1)
+print(vetor2)
+print(vetor3)
+
+4)
+text = """The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.""".lower()
+import string
+for c in string.punctuation:
+  text = text.replace(c, ' ')
+  
+resp = []
+for p in text.split():
+  if p[0] in 'python' or p[-1] in 'python':
+    resp.append(p)
+print(text)
+
+5)
+
+text = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()
+
+import string
+for c in string.punctuation:
+  text = text.replace(c, ' ')
+
+def pitônica(palavra):
+  for letra in palavra:
+    if letra in 'python':
+      return True
+  return False
+
+resp = []
+for p in text.split():
+  if pitônica(p) and len(p) > 4:
+    resp.append(p)
+    
+print (resp)
+print (len(resp))
+
+

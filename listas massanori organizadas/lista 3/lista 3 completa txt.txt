@@ -1,0 +1,46 @@
+while True:
+    nota = int(input("digite um numero de 0 à 10: ")) 
+    if nota <= 10 and nota >= 0:
+       print("essa nota é válida!")
+       break
+    else:
+      print("nota não valida.")
+      continue
+
+while True:
+    usuario = input(" digite aqui seu usuario: ")
+    senha = input("digite sua senha: ")
+    if senha == usuario:
+      print("a senha não deve ser igual ao usuario. Digite outra vez: ")
+      continue
+    else:
+      print("sua senha é valida!")
+      break
+
+a = 80000
+b = 200000
+c = 0
+
+while a < b:
+    a = a + (a/100) * 3
+    b = b + (b/100) * 1.5
+    c = 1 + c 
+
+    if a >= b:
+        print(f'Em {c} anos.')
+
+n = int(input('Digite um número inteiro: '))
+a, b = 1, 1
+
+while n > b:
+    a, b = b, a + b
+print(f'{a}')
+
+a = int(input('Digite o primeiro número: '))
+b = int(input('Digite o segundo número: '))
+
+if a < b:
+    a, b = b, a
+    while a % b != 0:
+        a, b = b, a % b
+    print(f'{b}')
